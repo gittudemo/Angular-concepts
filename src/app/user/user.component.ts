@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent {
+  userId : number = 10;
+  status : string = 'offline';
+  
+  getuserStatus() {
+    return this.status;
+  }
 
 }
