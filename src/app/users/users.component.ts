@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class UsersComponent {
   allowNewUser : boolean = false;
+  changeUserStatus = 'Not Created...'
 
 
   constructor() {
@@ -15,6 +16,11 @@ export class UsersComponent {
   
 }, 2000);
    
+  }
+
+
+  onChangeUserStatus() {
+    this.changeUserStatus = 'User Created....'
   }
 
 }
