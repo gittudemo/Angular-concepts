@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent {
+  allowNewUser : boolean = false;
+
+
+  constructor() {
+    setTimeout(() => {
+  this.allowNewUser = true
+  
+}, 2000);
+   
+  }
 
 }
