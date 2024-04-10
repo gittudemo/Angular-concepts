@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
 })
 export class UsersComponent {
   allowNewUser : boolean = false;
-  changeUserStatus = 'Not Created...'
+  changeUserStatus = 'Not Created...';
+  userName = '';
 
 
   constructor() {
@@ -21,6 +22,12 @@ export class UsersComponent {
 
   onChangeUserStatus() {
     this.changeUserStatus = 'User Created....'
+  }
+
+  onUpdateUSer(ev : Event) {
+this.userName = (ev.target as HTMLInputElement).value;
+//console.log(this.userName);
+
   }
 
 }
