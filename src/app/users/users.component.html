@@ -1,7 +1,8 @@
 <h1>users Component</h1>
 <div>
   <label>User name</label>
-  <input type="text" class="form-control" (input)="onUpdateUSer($event)">
+  <!-- <input type="text" class="form-control" (input)="onUpdateUSer($event)"> -->
+  <input type="text" clas="form-control" [(ngModel)]="userName">
 </div>
 <div>{{userName }}</div>
 <button 
