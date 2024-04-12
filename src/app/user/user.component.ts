@@ -7,10 +7,22 @@ import { Component } from '@angular/core';
 })
 export class UserComponent {
   userId : number = 10;
-  status : string = 'offline';
+  status : string | undefined;
+
+  constructor() {
+    this.status = Math.random() > 0.5 ? 'online' : 'offline';
+  }
   
   getuserStatus() {
     return this.status;
+  }
+
+  getColor() {
+    if(this.status === 'online') {
+return 'green';
+    }
+    return 'red';
+
   }
 
 }
