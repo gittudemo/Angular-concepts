@@ -9,6 +9,7 @@ export class UsersComponent {
   allowNewUser : boolean = false;
   changeUserStatus = 'Not Created...';
   userName = '';
+  isUserCreated = false;
 
 
   constructor() {
@@ -21,6 +22,7 @@ export class UsersComponent {
 
 
   onChangeUserStatus() {
+    this.isUserCreated = !this.isUserCreated;
     this.changeUserStatus = 'User Created....'
   }
 
