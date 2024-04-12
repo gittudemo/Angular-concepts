@@ -1,3 +1,7 @@
 <p>user Component!</p>
 <!-- <div>user wiht ID {{userId}} is {{status }}</div> -->
- <div [ngStyle]="{'background-color' : getColor()}">user wiht ID {{userId}} is {{getuserStatus() }}</div>
+ <div 
+ [ngStyle]="{'background-color' : getColor()}" 
+ [ngClass]=" { offline : status === 'offline'}">
+ user wiht ID {{userId}} is {{getuserStatus() }}
+</div>
