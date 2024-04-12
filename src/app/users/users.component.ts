@@ -7,9 +7,10 @@ import { Component } from '@angular/core';
 })
 export class UsersComponent {
   allowNewUser : boolean = false;
-  changeUserStatus = 'Not Created...';
+  //changeUserStatus = 'Not Created...';
   userName = '';
   isUserCreated = false;
+  users = ['user1','user2'];
 
 
   constructor() {
@@ -23,7 +24,8 @@ export class UsersComponent {
 
   onChangeUserStatus() {
     this.isUserCreated = !this.isUserCreated;
-    this.changeUserStatus = 'User Created....'
+    //this.changeUserStatus = 'User Created....';
+    this.users.push(this.userName);
   }
 
   onUpdateUSer(ev : Event) {

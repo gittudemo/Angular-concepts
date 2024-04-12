@@ -16,6 +16,5 @@ class="btn btn-primary"
 <ng-template #nouser>
   <div>No user created....</div>
 </ng-template>
-<app-user></app-user>
-<app-user></app-user>
-<app-user></app-user>
+<app-user *ngFor="let user of users"></app-user>
+
